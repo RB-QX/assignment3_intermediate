@@ -14,6 +14,11 @@
   border-radius: 8px;
   padding: 1rem;
   background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.calculator:hover {
+  transform: scale(1.02);
 }
 
 .display {
@@ -24,6 +29,20 @@
   border-radius: 4px;
   text-align: right;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Live preview styling */
+.display .preview {
+  font-size: 1.2rem;
+  color: #aaa;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.display .current {
+  margin-top: 20px;
 }
 
 .buttons {
@@ -39,11 +58,12 @@ button {
   border-radius: 4px;
   background: #eee;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
   background: #ddd;
+  transform: scale(1.05);
 }
 
 button.clear {
