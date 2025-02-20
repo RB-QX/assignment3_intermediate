@@ -1,13 +1,20 @@
 import React from 'react';
 import Calculator from './Calculator';
+import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>React Calculator</h1>
+      <header>
+        <h1>
+          {'Calculator'.split('').map((letter, i) => (
+            <span key={i} className="letter">{letter}</span>
+          ))}
+        </h1>
+      </header>
       <Calculator />
     </div>
   );
-}
+};
 
 export default App;
